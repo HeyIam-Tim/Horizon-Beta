@@ -1,0 +1,22 @@
+<div style="max-width: 500px; margin: 100px auto;" class="horizon">
+    <h1>Горизонт</h1>
+
+    <form action="" method="GET">
+        {{myFilter.form.unique_number}}
+        <input type="hidden" value="search" name="search" id="search">
+        <input type="submit" value="Поиск">
+    </form>
+    {% for product in products %} 
+        Идентификационный номер: {{product.unique_number}} <br>
+        Наименование: {{product.name}} <br>
+        Количество: {{product.qauntity}} <br>
+        Наименование магазина: {{product.shop.name}} <br>
+        Адрес: {{product.shop.address}} <br>
+        Контакты: {{product.shop.contact}} <br>
+        <br>
+    {% endfor %}
+
+</div>
+
+
+
